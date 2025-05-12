@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { ArrowRightLeft, Sparkles, Database, CloudUpload, CloudDownload } from "lucide-react";
+import { ArrowRightLeft, Sparkles, Database, CloudUpload, CloudDownload, UploadCloud, DownloadCloud } from "lucide-react";
+
 
 interface TransferDirectionSetupProps {
   direction: TransferDirection;
@@ -51,14 +52,14 @@ export function TransferDirectionSetup({ direction, onDirectionChange }: Transfe
               <Database className="h-5 w-5 text-muted-foreground" />
               <span>MSSQL</span>
               <ArrowRightLeft className="h-4 w-4 text-muted-foreground mx-1" />
-              <CloudUpload className="h-5 w-5 text-muted-foreground" />
+              <UploadCloud className="h-5 w-5 text-muted-foreground" />
               <span>BigQuery</span>
             </Label>
           </div>
           <div className="flex items-center space-x-2 p-3 border rounded-md hover:bg-accent/50 transition-colors">
             <RadioGroupItem value="bqToMssql" id="bqToMssql" />
             <Label htmlFor="bqToMssql" className="flex-1 cursor-pointer flex items-center gap-2 py-1">
-              <CloudDownload className="h-5 w-5 text-muted-foreground" />
+              <DownloadCloud className="h-5 w-5 text-muted-foreground" />
               <span>BigQuery</span>
               <ArrowRightLeft className="h-4 w-4 text-muted-foreground mx-1" />
               <Database className="h-5 w-5 text-muted-foreground" />
